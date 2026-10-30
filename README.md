@@ -17,7 +17,7 @@ Backend Architecture & Advanced Workflow Automation Framework
 ## 📐 System Overview
 Business owners lose dozens of hours every single week to manual inbox triage, repetitive scheduling back-and-forth, and hunting down contact records. 
 
-**Jadu** solves this overhead completely by abstracting enterprise operations into a unified mobile interface (Telegram). Users message the assistant in plain, conversational English, and the engine executes back-office legwork. To eliminate the risk of hallucinations or unauthorized data deletion, the infrastructure operates under a **Strict Human-in-the-Loop Gatekeeping Protocol**, meaning the AI formats drafts but cannot execute final API requests without explicit user authorization tokens.
+**Jadu** solves this overhead completely by abstracting enterprise operations into a unified mobile interface (Telegram). Users message the assistant in plain, conversational English, and the engine executes back-office legwork. To eliminate the risk of hallucinations or unauthorized data deletion, the infrastructure operates under a **Strict Human-in-the-Loop Gatekeeping Protocol**, meaning the AI formats drafts, but cannot execute final API requests without explicit user authorization tokens.
 
 ---
 
@@ -45,7 +45,7 @@ Business owners lose dozens of hours every single week to manual inbox triage, r
 * **Transactional Email Routing:** Allows the user to execute outgoing cold or warm email runs straight to newly discovered CRM contacts from their chat bar.
 
 ### 4. Zero-Trust Action Verification Gate (Human-in-the-Loop)
-* **The Security Gate:** This workflow forces a confirmation hold on all mutating API calls. Jadu generates a mock preview of the draft email or calendar invitation inside Telegram, appending explicit "Approve" or "Reject" inline callback buttons. The action stays frozen in the n8n queue until the user explicitly confirms.
+* **The Security Gate:** This workflow forces a confirmation hold on all mutating API calls. Jadu generates a mock preview of the draft email or calendar invitation inside Telegram, appending explicit "Approve" or "Reject" inline callback buttons. The action stays frozen in the n8n queue until the user physically grants confirmation.
 
 ---
 
